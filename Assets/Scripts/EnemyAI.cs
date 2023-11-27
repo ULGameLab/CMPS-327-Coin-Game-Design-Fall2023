@@ -110,6 +110,7 @@ public class EnemyAI : MonoBehaviour
             foreach (Collider c in allColliders) c.enabled = false;
             StartBloodSplatter();
             StartCoroutine(PlayAndDestroy(myaudio.clip.length));
+            GameStats.UpdateEnemyiesKilled();
         }
     }
 

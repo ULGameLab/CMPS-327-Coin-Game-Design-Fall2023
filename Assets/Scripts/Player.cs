@@ -51,6 +51,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         SetHealthBarValue(health / 100);
+        if (health <= 0) GameStats.EndGame();
     }
 
     void OnTriggerEnter(Collider other)
